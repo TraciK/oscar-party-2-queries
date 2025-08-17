@@ -6,9 +6,12 @@
   </ul>
 </nav>
 
-<h1>
-  <%= "#{@the_director.first_name} #{@the_director.last_name}" %>
-</h1>
+<article>
+  <header>
+    <h1>
+      <%= @the_director.first_name %> <%= @the_director.last_name %>
+    </h1>
+  </header>
 
 <dl>
   <dt>
@@ -28,8 +31,9 @@
   <dt>
     Bio
   </dt>
+  
   <dd>
-    <%= @the_director.bio %>
+  <%= simple_format(@the_director.bio) %>
   </dd>
 
   <dt>
@@ -39,8 +43,12 @@
     <%= @the_director.id %>
   </dd>
 </dl>
+</article>
 
-<h2>Filmography</h2>
+<article>
+  <header>
+    <h2>Filmography</h2>
+  </header>
 
 <ul>
   <% d_id = @the_director.id %>
@@ -53,3 +61,4 @@
     </li>
   <% end %>
 </ul>
+</article>

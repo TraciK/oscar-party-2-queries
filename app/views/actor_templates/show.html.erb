@@ -6,9 +6,12 @@
   </ul>
 </nav>
 
+<article>
+<header>
 <h1>
   <%= "#{@the_actor.first_name} #{@the_actor.last_name}" %>
 </h1>
+</header>
 
 <dl>
   <dt>
@@ -28,8 +31,9 @@
   <dt>
     Bio
   </dt>
+  
   <dd>
-    <%= @the_actor.bio %>
+    <%= simple_format(@the_actor.bio) %>
   </dd>
 
   <dt>
@@ -39,8 +43,12 @@
     <%= @the_actor.id %>
   </dd>
 </dl>
+</article>
 
+<article>
+<header>
 <h2>Filmography</h2>
+</header>
 
 <ul>
   <% a_id = @the_actor.id %>
@@ -59,3 +67,4 @@
     </li>
   <% end %>
 </ul>
+<article>

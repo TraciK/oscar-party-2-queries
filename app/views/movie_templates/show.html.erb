@@ -6,9 +6,12 @@
   </ul>
 </nav>
 
+<article>
+<header>
 <h1>
   <%= @the_movie.title %>
 </h1>
+</header>
 
 <dl>
   <dt>
@@ -61,7 +64,7 @@
     Description
   </dt>
   <dd>
-    <%= @the_movie.description %>
+    <%= simple_format(@the_movie.description) %>
   </dd>
 
   <dt>
@@ -91,8 +94,12 @@
     <%= @the_movie.id %>
   </dd>
 </dl>
+</article>
 
+<article>
+<header>
 <h2>Cast</h2>
+</header>
 
 <ul>
   <% m_id = @the_movie.id %>
@@ -113,3 +120,4 @@
     <% end %>
   <% end %>
 </ul>
+<article>
