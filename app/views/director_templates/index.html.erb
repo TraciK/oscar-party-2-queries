@@ -1,4 +1,14 @@
-<h1>List of directors</h1>
+<nav aria-label="breadcrumb">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li>Directors</li>
+  </ul>
+</nav>
+
+<article>
+  <header>
+    <h1>List of directors</h1>
+  </header>
 
 <ul>
   <% @list_of_directors.each do |director| %>
@@ -11,3 +21,4 @@
     </li>
   <% end %>
 </ul>
+</article>
